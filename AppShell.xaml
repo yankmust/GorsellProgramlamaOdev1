@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="GorsellProgramlamaOdev1.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:GorsellProgramlamaOdev1"
+    Shell.FlyoutBehavior="Flyout">
+
+
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent
+            Icon="home.png"
+            Title="Home"
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Icon="report_money.png"
+            Title="Credit Calculation"
+            ContentTemplate="{DataTemplate local:CreditCalculation}"
+            Route="CreditCalculation" />
+
+        <ShellContent
+            Icon="heart_defibrillator.png"
+            Title="Body Mass Index Calculation"
+            ContentTemplate="{DataTemplate local:BodyMassIndex}"
+            Route="BodyMassIndex" />
+
+        <ShellContent
+            Icon="image_colors.png"
+            Title="Color Selecter"
+            ContentTemplate="{DataTemplate local:Color_Selecter}"
+            Route="ColorSelecter" />
+
+        <ShellContent
+            Icon="todo_list.png"
+            Title="To Do List"
+            ContentTemplate="{DataTemplate local:ToDoList}"
+            Route="ToDoList" />
+    </FlyoutItem>
+</Shell>

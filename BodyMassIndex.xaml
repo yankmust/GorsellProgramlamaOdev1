@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GorsellProgramlamaOdev1.BodyMassIndex"
+             Title="BodyMassIndex">
+    <StackLayout>
+        <Label Text="BMI Calculator" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontSize="24" TextColor="Orange"/>
+
+        <Label Text="Weight (kg):" TextColor="Orange"/>
+        <Slider x:Name="sliderWeight" Minimum="0" Maximum="200" Value="{Binding Weight, Mode=TwoWay}" ValueChanged="OnWeightValueChanged" BackgroundColor="Orange"/>
+        <Label Text="{Binding Weight, StringFormat='Your weight: {0:F0} kg'}" TextColor="GreenYellow"/>
+
+        <Label Text="Height (cm):" TextColor="Orange"/>
+        <Slider x:Name="sliderHeight" Minimum="0" Maximum="250" Value="{Binding Height, Mode=TwoWay}" ValueChanged="OnHeightValueChanged" BackgroundColor="Orange"/>
+        <Label Text="{Binding Height, StringFormat='Your height: {0:F0} cm'}" TextColor="GreenYellow"/>
+
+        <Label x:Name="lblResult" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontSize="20" Text="{Binding Result}" TextColor="Orange"/>
+    </StackLayout>
+</ContentPage>
