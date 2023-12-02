@@ -36,13 +36,13 @@
                 VerticalOptions = LayoutOptions.CenterAndExpand
             };
 
-            // StackLayout'a eklemek
+         
             StackLayout stackLayout = new StackLayout();
             stackLayout.Children.Add(label1);
             stackLayout.Children.Add(label2);
             stackLayout.Children.Add(label3);
 
-            // Sayfa içine StackLayout ve Image eklemek
+          
             Content = new StackLayout
             {
                 Children = {
