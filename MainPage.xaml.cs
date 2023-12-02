@@ -7,7 +7,7 @@
         {
             InitializeComponent();
 
-            // Metin etiketlerine içerik eklemek
+            
             Label label1 = new Label
             {
                 Text = "Yankı Muştu",
@@ -17,7 +17,7 @@
             };
             BoxView spaceBetweenLabels = new BoxView
             {
-                HeightRequest = 100 // Boşluğun yüksekliği (isteğe bağlı)
+                HeightRequest = 100 
             };
 
             Label label2 = new Label

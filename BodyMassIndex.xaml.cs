@@ -12,7 +12,7 @@ namespace GorsellProgramlamaOdev1
             viewModel = new BodyMassIndexViewModel();
             BindingContext = viewModel;
 
-            // Slider'larýn deðer deðiþikliklerini dinleme
+            
             sliderWeight.ValueChanged += OnWeightValueChanged;
             sliderHeight.ValueChanged += OnHeightValueChanged;
         }
@@ -22,10 +22,10 @@ namespace GorsellProgramlamaOdev1
             double weight = viewModel.Weight;
             double height = viewModel.Height;
 
-            // BMI hesaplama formülü: BMI = kilo / (boy^2)
+           
             double bmi = weight / Math.Pow(height / 100, 2);
 
-            // BMI sonuçlarýný deðerlendirme
+          
             viewModel.Result = $"BMI: {bmi:F2}\n{GetBMIResult(bmi)}";
         }
 
@@ -65,8 +65,8 @@ namespace GorsellProgramlamaOdev1
 
     public class BodyMassIndexViewModel : BindableObject
     {
-        private double _weight = 70; // Varsayýlan kilo deðeri
-        private double _height = 170; // Varsayýlan boy deðeri
+        private double _weight = 70; 
+        private double _height = 170; 
         private string _result;
 
         public double Weight
