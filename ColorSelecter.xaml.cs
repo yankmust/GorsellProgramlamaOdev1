@@ -13,6 +13,7 @@ namespace GorsellProgramlamaOdev1
         public Color_Selecter()
         {
             InitializeComponent();
+            
 
             redSlider = new Slider
             {
@@ -40,10 +41,12 @@ namespace GorsellProgramlamaOdev1
 
             colorBox = new BoxView
             {
-                WidthRequest = 200,
+                Margin = new Thickness(5),
+                WidthRequest = 700,
                 HeightRequest = 200,
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center
+                
             };
 
             colorCodeLabel = new Label
@@ -51,7 +54,7 @@ namespace GorsellProgramlamaOdev1
                 Text = "",
                 HorizontalOptions = LayoutOptions.Center,
                 VerticalOptions = LayoutOptions.Center,
-                TextColor = Color.FromRgb(255,255,255) // Renk kodu metni rengi
+                TextColor = Color.FromRgb(255,255,255) 
             };
 
             redSlider.ValueChanged += OnSliderValueChanged;
@@ -69,8 +72,8 @@ namespace GorsellProgramlamaOdev1
                     new Label { Text = "Blue" },
                     blueSlider,
                     colorBox,
-                    new Button { Text = "Randomize Color", Command = new Command(RandomizeColor) },
-                    new Button { Text = "Copy Color Code " , Command = new Command(CopyColorCode) }
+                    new Button { Text = "Randomize Color",Margin = new Thickness(25,0), Command = new Command(RandomizeColor), BackgroundColor=Color.FromRgb(38,38,38), TextColor=Color.FromRgb(255,255,255) },
+                    new Button { Text = $"Copy Color Code {colorCodeLabel.Text}" , Margin = new Thickness(25,5), Command = new Command(CopyColorCode),BackgroundColor=Color.FromRgb(38,38,38), TextColor=Color.FromRgb(255,255,255) }
                 }
             };
         }
@@ -104,8 +107,9 @@ namespace GorsellProgramlamaOdev1
         {
             var colorCode = colorCodeLabel.Text;
 
-            // Renk kodunu panoya kopyala
+            
             Clipboard.SetTextAsync(colorCode);
+            DisplayAlert("Color Code Copied", $"Color code {colorCode} copied to clipboard.", "OK");
         }
     }
 }

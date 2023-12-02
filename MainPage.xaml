@@ -3,15 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GorsellProgramlamaOdev1.MainPage">
 
-    <StackLayout Spacing="10">
-        <!-- Resim eklemek için Image kontrolü -->
-        <Image Source="pp.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" />
-
-        <!-- Metin eklemek için Label kontrolü -->
-        <Label Text="Yankı Muştu" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"/>
-        <Label Text="ÖDEV-1" FontSize="20" Margin="0,0,0,50" HorizontalOptions="Center" VerticalOptions="Center"/>
-    </StackLayout>
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto,Auto,Auto,Auto" Padding="20">
+        <Image Source="pp.png" Aspect="AspectFit" WidthRequest="200" HeightRequest="200" Grid.RowSpan="1" />
+        <Label Text="Yankı Muştu" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center"
+               Grid.RowSpan="2"/>
+        <Label Text="Bartın Üniversitesi Bilgisayar Mühendisliği" FontSize="20" HorizontalOptions="Center" VerticalOptions="Center" Grid.RowSpan="3"/>
+        <Label Text="ÖDEV-1" FontSize="20" Padding="50" HorizontalOptions="Center" VerticalOptions="Center" Grid.RowSpan="4"/>
+    </Grid>
 
 
 </ContentPage>

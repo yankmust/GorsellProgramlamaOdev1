@@ -4,15 +4,15 @@
              x:Class="GorsellProgramlamaOdev1.BodyMassIndex"
              Title="BodyMassIndex">
     <StackLayout>
-        <Label Text="BMI Calculator" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontSize="24" TextColor="Orange"/>
+        <Label Text="BMI Calculator" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontSize="24" TextColor="Orange" Margin="30"/>
 
-        <Label Text="Weight (kg):" TextColor="Orange"/>
-        <Slider x:Name="sliderWeight" Minimum="0" Maximum="200" Value="{Binding Weight, Mode=TwoWay}" ValueChanged="OnWeightValueChanged" BackgroundColor="Orange"/>
-        <Label Text="{Binding Weight, StringFormat='Your weight: {0:F0} kg'}" TextColor="GreenYellow"/>
+        <Label Text="Weight (kg):" TextColor="Orange" Margin="10,0,0,0" />
+        <Slider x:Name="sliderWeight" Minimum="0" Maximum="200"  Value="{Binding Weight, Mode=TwoWay}" ValueChanged="OnWeightValueChanged" BackgroundColor="Orange"/>
+        <Label Text="{Binding Weight, StringFormat='Your weight: {0:F0} kg'}" TextColor="GreenYellow" Margin="10,0,0,0" />
 
-        <Label Text="Height (cm):" TextColor="Orange"/>
+        <Label Text="Height (cm):" TextColor="Orange" Margin="10,20,0,0" />
         <Slider x:Name="sliderHeight" Minimum="0" Maximum="250" Value="{Binding Height, Mode=TwoWay}" ValueChanged="OnHeightValueChanged" BackgroundColor="Orange"/>
-        <Label Text="{Binding Height, StringFormat='Your height: {0:F0} cm'}" TextColor="GreenYellow"/>
+        <Label Text="{Binding Height, StringFormat='Your height: {0:F0} cm'}" TextColor="GreenYellow" Margin="10,0,0,0" />
 
         <Label x:Name="lblResult" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" FontSize="20" Text="{Binding Result}" TextColor="Orange"/>
     </StackLayout>

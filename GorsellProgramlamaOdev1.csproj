@@ -49,6 +49,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\close.png" />
+	  <None Remove="Resources\Images\edit.png" />
+	  <None Remove="Resources\Images\edit2.png" />
 	  <None Remove="Resources\Images\pp.png" />
 	</ItemGroup>
 
